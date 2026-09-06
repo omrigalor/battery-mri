@@ -1,0 +1,41 @@
+{
+  "pybamm_version": "26.8.0.0",
+  "config": {
+    "sei_multiplier": 3.0,
+    "diffusion_multiplier": 0.9,
+    "soc": 0.55,
+    "temperature": 298.15,
+    "max_c": 2.0,
+    "duration": 120.0,
+    "sigma": 0.02,
+    "seed": 731,
+    "measurement_seed": 42,
+    "version": 1
+  },
+  "cache_sha256": "fbf8482a4ae933b90c9391e14ec045ff49a7599acef985f1b36911607f08ea5f",
+  "source_files": {
+    "backend/science/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/science/cache.py": "bc2de23f794ee7d1aef6c522cf9d79ef8f2b7656fcb818ece85240438d57165b",
+    "backend/science/inference.py": "06d8710d41d5f00cb96ed50b185e912834faaea8744348d5a44aa65fcbbbd4c1",
+    "backend/science/optimizer.py": "2878c42f77fbbd11c8507d74114fa71f9f496a6e83e73ca5c02c5afc7ac41c3e",
+    "backend/science/simulator.py": "bac61be013ff10fb4410612109d64cef526ad91d6e80a2496be87e6573541f09",
+    "backend/science/waveform.py": "df11f8f914f00a557db1d1421cf70f5f5bd48da8533f4f0839cd98033a4837e2"
+  },
+  "verification": {
+    "science_tests": 6,
+    "interface_behavior_tests": 2,
+    "live_lab": "passed",
+    "http_launch": "passed",
+    "browser_rendering": "blocked: Chromium MachPortRendezvousServer permission denied (1100)",
+    "automatic_browser_open": "blocked in managed session: macOS Launch Services -10661"
+  },
+  "limitations": [
+    "Binary fixed-hypothesis optimization does not guarantee a prior-dependent global best waveform.",
+    "Controlled reset between probes, no continuous state carryover.",
+    "Curated synthetic-noise seed; no real-cell validation."
+  ],
+  "frontend_assets": {
+    "frontend/dist/assets/index-BZII5bBw.css": "116433c27c2234cf246952ede15b3987b32c7f38f77bb63c05376c920b8b921d",
+    "frontend/dist/assets/index-B7e4ThF8.js": "ce9b7dfd077348f0b72b7fa9dd90d2a83b90c82c3db90334f7a5f0569fead799"
+  }
+}

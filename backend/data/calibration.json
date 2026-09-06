@@ -1,0 +1,90 @@
+{
+  "search": [
+    {
+      "sei_multiplier": 2,
+      "diffusion_multiplier": 0.7,
+      "baseline_bits": 0.0006677695002409445,
+      "candidate_bits": 0.12772796305380907
+    },
+    {
+      "sei_multiplier": 2,
+      "diffusion_multiplier": 0.8,
+      "baseline_bits": 0.0006699785656819612,
+      "candidate_bits": 0.12872708407205102
+    },
+    {
+      "sei_multiplier": 2,
+      "diffusion_multiplier": 0.9,
+      "baseline_bits": 0.0006719487940782809,
+      "candidate_bits": 0.12953102559528828
+    },
+    {
+      "sei_multiplier": 3,
+      "diffusion_multiplier": 0.7,
+      "baseline_bits": 0.0026791695502489388,
+      "candidate_bits": 0.4100602901410182
+    },
+    {
+      "sei_multiplier": 3,
+      "diffusion_multiplier": 0.8,
+      "baseline_bits": 0.0026836155030720565,
+      "candidate_bits": 0.41133066784745664
+    },
+    {
+      "sei_multiplier": 3,
+      "diffusion_multiplier": 0.9,
+      "baseline_bits": 0.002687563499736978,
+      "candidate_bits": 0.4123461481443851
+    },
+    {
+      "sei_multiplier": 4,
+      "diffusion_multiplier": 0.7,
+      "baseline_bits": 0.006023064942265899,
+      "candidate_bits": 0.680012189721378
+    },
+    {
+      "sei_multiplier": 4,
+      "diffusion_multiplier": 0.8,
+      "baseline_bits": 0.006029722988697195,
+      "candidate_bits": 0.6809880839346494
+    },
+    {
+      "sei_multiplier": 4,
+      "diffusion_multiplier": 0.9,
+      "baseline_bits": 0.006035626788976511,
+      "candidate_bits": 0.6817661215936432
+    },
+    {
+      "sei_multiplier": 5,
+      "diffusion_multiplier": 0.7,
+      "baseline_bits": 0.0106809946479699,
+      "candidate_bits": 0.858338582394052
+    },
+    {
+      "sei_multiplier": 5,
+      "diffusion_multiplier": 0.8,
+      "baseline_bits": 0.010689828105225119,
+      "candidate_bits": 0.858891480497784
+    },
+    {
+      "sei_multiplier": 5,
+      "diffusion_multiplier": 0.9,
+      "baseline_bits": 0.010697655233773862,
+      "candidate_bits": 0.8593315398011049
+    }
+  ],
+  "selected": {
+    "sei_multiplier": 3,
+    "diffusion_multiplier": 0.9,
+    "baseline_bits": 0.002687563499736978,
+    "candidate_bits": 0.4123461481443851
+  },
+  "witness_amplitudes": [
+    1.615115049578682,
+    -1.019335780722081,
+    0.3535744322210057,
+    1.8355298575481118,
+    1.9987322565223615,
+    -1.7786976282961675
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sei_multiplier": 3.0,
+  "diffusion_multiplier": 0.9,
+  "soc": 0.55,
+  "temperature": 298.15,
+  "max_c": 2.0,
+  "duration": 120.0,
+  "sigma": 0.02,
+  "seed": 731,
+  "measurement_seed": 42,
+  "version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "url": "http://127.0.0.1:63362",
+  "health": {
+    "status": "ok",
+    "pybamm_version": "26.8.0.0",
+    "demo_cache_valid": true,
+    "frontend_build_exists": true,
+    "cache_version_matches": true
+  },
+  "html_status": 200,
+  "assets": {
+    "/assets/index-B7e4ThF8.js": 200,
+    "/assets/index-BZII5bBw.css": 200
+  },
+  "data_loaded": true
+}

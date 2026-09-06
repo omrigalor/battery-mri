@@ -1,0 +1,32 @@
+import {test,expect} from '@playwright/test';
+test('automatic offline-ready demo and controls',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.setViewportSize({width:1366,height:900});
+ await page.route('**/*',route=>route.request().url().startsWith('http://127.0.0.1:8765')?route.continue():route.abort());
+ await page.goto('http://127.0.0.1:8765');
+ await expect(page.getByRole('button',{name:'Start demo'})).toBeVisible();
+ await page.screenshot({path:'../Reports/landing.png',fullPage:true});
+ await page.getByRole('button',{name:'Start demo'}).click();
+ await expect(page.getByRole('heading',{name:'One cell. Two explanations.'})).toBeVisible();
+ await page.getByRole('button',{name:'Pause',exact:true}).click();
+ await page.waitForTimeout(11000);
+ await expect(page.getByRole('heading',{name:'One cell. Two explanations.'})).toBeVisible();
+ await page.getByRole('button',{name:'Resume',exact:true}).click();
+ await page.getByRole('button',{name:'Next',exact:true}).click();
+ await expect(page.locator('.js-plotly-plot').first()).toBeVisible();
+ await page.getByRole('button',{name:'Go to scene 4',exact:true}).click();
+ await page.getByRole('button',{name:'Pause',exact:true}).click();
+ await page.screenshot({path:'../Reports/response.png',fullPage:true});
+ for(const width of [1366,1024,600]){await page.setViewportSize({width,height:900});await page.waitForTimeout(300);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy()}
+ await page.setViewportSize({width:1366,height:900});
+ await page.getByRole('button',{name:'Skip to result',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'From passive analysis to active interrogation.'})).toBeVisible();
+ await page.getByRole('button',{name:'Reveal ground truth'}).click();
+ await expect(page.getByText('Hidden virtual cell: hypothesis A',{exact:false})).toBeVisible();
+ await page.getByRole('button',{name:'Show the math'}).click();await expect(page.getByRole('dialog')).toBeVisible();await page.getByRole('button',{name:'Close ✕'}).click();
+ await page.getByRole('button',{name:'Replay',exact:true}).click();
+ await page.waitForTimeout(85000);
+ await expect(page.getByRole('heading',{name:'From passive analysis to active interrogation.'})).toBeVisible();
+ await page.screenshot({path:'../Reports/result.png',fullPage:true});
+ expect(errors).toEqual([]);
+});

@@ -1,0 +1,6 @@
+NOT PASSED — ENVIRONMENT BLOCKER
+Playwright Chromium headless launch terminated before page creation.
+FATAL: base/apple/mach_port_rendezvous_mac.cc:159
+bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer: Permission denied (1100)
+No rendered screenshots were generated. No responsive visual acceptance claim is made.
+The launcher server started and served all assets; macOS open returned Launch Services -10661 in this session.
