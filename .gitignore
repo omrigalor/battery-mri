@@ -11,3 +11,4 @@ backend/data/last_launch.json
 frontend/test-results/
 frontend/playwright-report/
 backend/data/*.tmp
+frontend/dist-static/
